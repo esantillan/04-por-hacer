@@ -24,7 +24,14 @@ const argv = require('yargs')
         descripcion,
         completado
     })
-    .command('listar', 'Muestra las tareas por hacer', {})
+    .command('listar', 'Muestra las tareas por hacer', {
+        inlcuirCompletados: {
+            alias: 'ic',
+            type: 'boolean',
+            default: true,
+            desc: 'Inluir completados (por defecto true)'
+        }
+    })
     .help()
     .argv;
 

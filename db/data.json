@@ -3,7 +3,11 @@
         "completado": false
     },
     {
-        "descripcion": "tarea 5",
+        "descripcion": "tarea 3",
         "completado": false
+    },
+    {
+        "descripcion": "tarea 5",
+        "completado": true
     }
 ]

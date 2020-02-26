@@ -44,9 +44,17 @@ const crear = (descripcion) => {
     return porHacer;
 }
 
-const getListado = () => {
+const getListado = (inlcuirCompletados = true) => {
     cargarDB();
-    return listadoPorHacer;
+
+    console.log(`Recibí como "inlcuirCompletados" [${inlcuirCompletados}]`);
+
+    if (inlcuirCompletados === true) {
+        console.log("Devuelvo todo");
+        return listadoPorHacer;
+    } else {
+        return listadoPorHacer.filter(tarea => tarea.completado === false);
+    }
 }
 
 

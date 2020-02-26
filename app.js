@@ -30,7 +30,8 @@ switch (comando) {
         console.log(tarea);
         break;
     case 'listar':
-        let listado = porHacer.getListado();
+        console.log(argv);
+        let listado = porHacer.getListado(argv.inlcuirCompletados);
 
         for (const tarea of listado) {
             console.log('<Por-Hacer>'.green);
